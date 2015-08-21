@@ -2,15 +2,15 @@
   "name": "rxjs-trial-02",
   "version": "1.0.0",
   "description": "trying rxjs",
-  "main": "index.js",
   "scripts": {
+    "start": "node single-async.js; node multiple-async.js;",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "rxjs"
   ],
   "author": "Amrudesh",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "rx-lite": "^3.1.0"
   }

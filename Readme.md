@@ -3,6 +3,9 @@
 
 A simple RxJs trial to replace Promises. Demonstrates how Observable can be disposed too.
 
+single-async.js handles a single async process.
+multiple-async.js takes 3 async processes and waits for all to complete before calling complete.
+
 
 Installation
 ----
@@ -13,4 +16,4 @@ npm install
 Running
 ----
 
-node index.js
+npm start  (runs both)

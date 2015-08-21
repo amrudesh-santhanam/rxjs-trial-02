@@ -1,5 +1,7 @@
 var Rx = require('rx-lite');
 
+console.log('Single Async process:\n--------------------');
+
 var source = Rx.Observable.create(function(observer){
 	var id = setTimeout(function(){
 		try {
@@ -15,13 +17,13 @@ var source = Rx.Observable.create(function(observer){
 	}, 1000);
 
 	return function(){
-		console.log('disposing source');
+		console.log('disposing observable \n');
 		clearTimeout(id);
 	};
 });
 
 var sub = source.subscribe(function(x){
-	console.log(x);
+	console.log('Return value: ' + x);
 }, function (error){
 	console.log(error);
 }, function(){
@@ -30,5 +32,4 @@ var sub = source.subscribe(function(x){
 
 setTimeout(function(){
 	sub.dispose();
-}, 750);
-
+}, 1050);
